@@ -60,10 +60,10 @@
   
   // 첫번째 방법
   scores.forEach(function(score) {
-    // score의 값을 숫자로 바꿔주어야 한다
-		var score = parseInt(score.value);
-		totalScore += score;
-	});
+	// score의 값을 숫자로 바꿔주어야 한다
+	var score = parseInt(score.value);
+	totalScore += score;
+});
   
   // 두번째 방법, 코드가 훨씬 더 간결해진다
   scores.forEach((score) => totalScore += parseInt(score.value));
