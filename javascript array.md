@@ -117,3 +117,5 @@ names = data.map(student => student.name;
    // 아래와 같이도 쓸 수 있다
    numbers = [1, 2, 3, 4, 5].reduce((subtotal, num) => subtotal + num);
 ```
+- 특히 reduce와 map은 빅데이터에서 중요하게 여기는 개념 중 하나이다.
+- map은 원본 데이터에서 내가 필요한 데이터로 가공하는 것이고, <br> reduce는 가공된 데이터를 취합하는 용도로 자주 사용된다.
