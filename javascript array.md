@@ -101,3 +101,19 @@ var names = data.map(function (student) {
 
 names = data.map(student => student.name;
 ```
+## reduce(function)의 사용 예제
+- 배열의 요소를 처리해서 최종적으로 값 하나를 반환한다
+- 배열.reduce(function(total, value) { return total + value; })
+- total의 초기값은 0이다
+- 지정된 함수의 반환값이 다음번 실행되는 함수의 total로 전달된다
+- value에는 배열의 값이 순서대로 전달된다
+
+```javascript
+   var numbers = [1, 2, 3, 4, 5];
+   var totals = numbers.reduce(function(subtotal, num) {
+   	return subtotal + num;
+   });
+   
+   // 아래와 같이도 쓸 수 잇다
+   numbers = [1, 2, 3, 4, 5].reduce((subtotal, num) => subtotal + num);
+```
