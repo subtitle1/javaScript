@@ -83,3 +83,21 @@
   shortNames = names.filter(name => name.length == 2);
 ```
 - forEach는 배열의 모든 값을 순환하고, filter는 배열의 값 중에서 true인 값만 포함된 배열을 반환한다.
+
+## map(function)의 사용 예제
+- 원본 배열을 사용해서 새로운 정보가 들어있는 배열을 만들 때 사용하는 것이 map 메소드이다.
+```javascript
+	var data = [
+		{name:"홍길동", kor:100, eng:70, math:70},
+		{name:"김유신", kor:90, eng:90, math:60},
+		{name:"강감찬", kor:70, eng:50, math:40},
+		{name:"이순신", kor:80, eng:100, math:70},
+		{name:"유관순", kor:100, eng:80, math:80}
+	];
+
+	var names = data.map(function (student) {
+		return student.name;
+	});
+	
+	names = data.map(student => student.name;
+```
