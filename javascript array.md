@@ -114,6 +114,6 @@ names = data.map(student => student.name;
    	return subtotal + num;
    });
    
-   // 아래와 같이도 쓸 수 잇다
+   // 아래와 같이도 쓸 수 있다
    numbers = [1, 2, 3, 4, 5].reduce((subtotal, num) => subtotal + num);
 ```
