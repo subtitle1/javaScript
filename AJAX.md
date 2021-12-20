@@ -84,6 +84,7 @@ public class ProductListController extends HttpServlet {
     xhr.onreadystatechange = function() {
       if (xhr.readyState == 4 && xhr.state == 200) {
         // 5. XMLHttpRequest의 responseText 프로퍼티에 저장된 응답데이터 가져오기
+	// 서버가 보낸 텍스트 데이터는 XMLHttpRequest의 responseText 프로퍼티에 저장된다
         var jsonText = xhr.responseText;
         
         // 6. jsonText를 자바스크립트 객체/배열로 변환하기
@@ -106,7 +107,7 @@ public class ProductListController extends HttpServlet {
       }
     };
     
-    // 3. XMLHttpRequest 객체 초기화
+    // 3. XMLHttpRequest 객체 초기화 (요청방식과 요청URL을 설정하는 것이다)
     xhr.open("GET", "/script2/product/list.hta");
     
     // 4. 웹서버로 요청 보내기
