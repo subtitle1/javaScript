@@ -58,14 +58,16 @@
 // 아이디를 어떻게 잘 부여하느냐가 자바스크립트 코드의 양을 확 줄여줌
 // 조회, 변경의 대상이 되는 것들은 항상 id가 붙는다고 생각하자!
 // 연관이 있는 줄은 아이디에 연관된 값이 존재해야 한다 (price-10, order-price-10, amount-10)
-  var totalOrderPrice = 0;
-  $(':checkbox[name=itemNo]:checked').each(function() {
-    var itemNo = $(this).val();
-    var orderPrice = $('#order-price-'+itemNo).attr('data-order-price');
-    totalOrderPrice += parseInt(orderPrice);
-  });
-  $('#total-order-price').text(totalOrderPrice.toLocaleString());
 
+  // 총구매가격 계산해서 반영하기
+	var totalOrderPrice = 0;
+	$("strong[data-order-price]").each(function() {
+		var orderPrice = parseInt($(this).data('order-price'));
+		totalOrderPrice += orderPrice;
+	});
+	$("#total-order-price").text(totalOrderPrice.toLocaleString());
+
+  // 구매수량을 변경하고 변경버튼을 클릭하면 구매가격을 계산해서 반영하기
   $('button[data-btn="update"]').click(function() {
     // 아이템 번호 조회
     var itemNo = $(this).data('item-no');
